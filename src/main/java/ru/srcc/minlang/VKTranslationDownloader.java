@@ -234,19 +234,20 @@ public class VKTranslationDownloader {
 
 
         try{
-            if(args.length < 4){
-                throw new AutomationException("usage: <login> <password> <path_to_chromediver> <output_folder>");
+            if(args.length < 5){
+                throw new AutomationException("usage: <login> <password> <path_to_chromediver> <output_folder> <batch_size>");
             }
             System.out.println(Arrays.toString(args));
             String chromeDriverPath = args[0];
             String login = args[1];
             String password = args[2];
-            String outputFolderPath= args[3];
+            String outputFolderPath = args[3];
+            int batchSize = Integer.parseInt(args[4]);
             VKTranslationDownloader vkTranslationDownloader =
                     new VKTranslationDownloader(chromeDriverPath,
                             login,
                             password);
-            vkTranslationDownloader.downloadTranslations(10,
+            vkTranslationDownloader.downloadTranslations(batchSize,
                     outputFolderPath);
         }
         catch (Exception e){
