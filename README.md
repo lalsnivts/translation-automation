@@ -19,4 +19,9 @@ java -jar KTranslationAutomation-1.0-SNAPSHOT-jar-with-dependencies.jar <ваш 
 Пример:
 `java -jar KTranslationAutomation-1.0-SNAPSHOT-jar-with-dependencies.jar "C:\chromedriver_win32\chromedriver.exe" "testlogin@example.com" "password "C:\MyTranslation\resources" "10"`
 
-В папке, указанной как папка для результата, появятся файлы. От размера пачки зависит число строк в файле
+В папке, указанной как папка для результата, появятся файлы. От размера пачки зависит число строк в файле.
+
+Планы:
+* настройки вынести в ini-файл, валидировать их
+* сделать возможность не только выгружать переводы, но и загружать сделанные
+* <мы открыты предложениям>
